@@ -94,16 +94,26 @@
                 <div class="col-md-8 row">
                     <div class="col-auto">
                         <div id="">
-                            <div class="card thumbnail-card" onclick="changeImage(this)">
-                                <img src="https://images.kabum.com.br/produtos/fotos/164854/placa-de-video-asus-nvidia-dual-rtx-3060-o12g-v2-15-gbps-12gb-gddr6-ray-tracing-dlss-90yv0gb2-m0na10_1623244899_gg.jpg"
-                                    alt="Imagem Miniatura 1">
-                            </div>
-                            <div class="card thumbnail-card" onclick="changeImage(this)">
-                                <img src="https://images.kabum.com.br/produtos/fotos/164854/placa-de-video-asus-nvidia-dual-rtx-3060-o12g-v2-15-gbps-12gb-gddr6-ray-tracing-dlss-90yv0gb2-m0na10_1623244900_gg.jpg"
-                                    alt="Imagem Miniatura 2">
-                            </div>
+
+                        <div class="card thumbnail-card" onclick="changeImage(this)">
+                            <img src="https://images.kabum.com.br/produtos/fotos/435643/smartphone-samsung-galaxy-a54-5g-128gb-8gb-ram-octa-core-camera-tripla-de-50mp-tela-infinita-de-6-4-preto-sm-a546ezklzto_1678372969_gg.jpg"
+                                alt="Imagem Miniatura 1">
                         </div>
+                        <div class="card thumbnail-card" onclick="changeImage(this)">
+                            <img src="https://images.kabum.com.br/produtos/fotos/435643/smartphone-samsung-galaxy-a54-5g-128gb-8gb-ram-octa-core-camera-tripla-de-50mp-tela-infinita-de-6-4-preto-sm-a546ezklzto_1678372963_gg.jpg"
+                                alt="Imagem Miniatura 2">
+                        </div>
+                        <div class="card thumbnail-card" onclick="changeImage(this)">
+                            <img src="https://images.kabum.com.br/produtos/fotos/435643/smartphone-samsung-galaxy-a54-5g-128gb-8gb-ram-octa-core-camera-tripla-de-50mp-tela-infinita-de-6-4-preto-sm-a546ezklzto_1678372968_gg.jpg"
+                                alt="Imagem Miniatura 3">
                     </div>
+                    <div class="card thumbnail-card" onclick="changeImage(this)">
+                        <img src="https://images.kabum.com.br/produtos/fotos/435643/smartphone-samsung-galaxy-a54-5g-128gb-8gb-ram-octa-core-camera-tripla-de-50mp-tela-infinita-de-6-4-preto-sm-a546ezklzto_1678372966_gg.jpg"
+                            alt="Imagem Miniatura 4">
+                </div>
+                </div>
+                </div>
+                
                     <div class="col">
                         <div class="card">
                             <div class="card-body">
@@ -118,11 +128,11 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <p>Vendido e entregue por: <strong>KaBuM!</strong><br> <span class="in-stock">Em estoque</span></p>
+                    <p>Vendido e entregue por: <strong>ByteTech!</strong><br> <span class="in-stock">Em estoque</span></p>
                     <div class="price">
                         <span class="text-muted"><del>R$  2.899,00</del></span>
                         <br>
-                        <h2 class="mb-1 fw-bold">R$ 2.499,00 </h2>
+                        <h2 class="mb-1 fw-bold">R$ 2.499,00</h2>
                         <p class="fs-6 fw-bold mb-1 text-muted">À vista no PIX com até 10% OFF</p>
                     </div>
                     <div class="mb-2">
@@ -130,7 +140,7 @@
                     </div>
                     <div class="mb-2">
                         <button class="btn btn-primary" id="addToCartBtn"
-                            onclick="addToCart('Smartphone Samsung Galaxy A54, 5G', 2.099)">Adicionar ao Carrinho</button>
+                            onclick="addToCart('Smartphone Samsung Galaxy A54, 5G', 2400)">Adicionar ao Carrinho</button>
                     </div>
     
                 </div>
@@ -146,11 +156,6 @@
                     <p>Com uma super tela de AMOLED de 6,4 Polegadas, o Galaxy A54 chega para revolucionar com suas características inovadoras e se tornando uma ótima opção para qualquer tipo de utilização. Com resolução FHD e taxa de atualização de 120 Hz, possui mais 16 milhões de cores, dando mais clareza à sua tela. Além das 3 câmeras traseiras com 50 Megapixels de resolução em uma delas, dando uma vivacidade e qualidade a cada clique.</p>
                     <p><span class="bold-text">Alta performance com design simples</span></p>
                     <p>O Samsung Galaxy A54 vem equipado com um processador com oito núcleos, Octa-core, com a velocidade de 2.6GHz, além de possuir uma memória RAM de 8GB e capacidade interna de 128GB e slot para cartões de memória em modelo MicroSD com capacidade de até 1TB. Seu design simples, possui bordas arredondadas e tela infinita, sem botões aparentes ou detalhes que tiram toda a atenção.</p>
-
-
-
-
-
 
 
                 </div>
@@ -173,17 +178,27 @@
                     </tr>
                 </thead>
                 <tbody id="cart-items">
-                   
+                  
                 </tbody>
             </table>
     
             <p class="text-end">Total: <span id="cart-total">R$ 0.00</span></p>
         </div>
      </div>
+    <script>
+        function changeImage(element) {
+            var mainImage = document.getElementById("main-image");
+            var thumbnailImages = document.querySelectorAll(".thumbnail-card img");
+
+           
+            var index = Array.from(thumbnailImages).indexOf(element.querySelector('img'));
+
+            if (mainImage && thumbnailImages.length > index) {
+                mainImage.src = thumbnailImages[index].src;
+            }
+        }
+    </script>
     <script src="assets/js/carrinho.js"></script>
-    
-
-
 </body>
 
 </html>

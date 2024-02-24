@@ -95,15 +95,24 @@
                     <div class="col-auto">
                         <div id="">
                             <div class="card thumbnail-card" onclick="changeImage(this)">
-                                <img src="https://images.kabum.com.br/produtos/fotos/164854/placa-de-video-asus-nvidia-dual-rtx-3060-o12g-v2-15-gbps-12gb-gddr6-ray-tracing-dlss-90yv0gb2-m0na10_1623244899_gg.jpg"
+                                <img src="https://images.kabum.com.br/produtos/fotos/356530/notebook-samsung-intel-core-i5-1135g7-8gb-ram-ssd-256gb-15-6-full-hd-windows-11-home-cinza-np550xda-kh2br_1655749555_gg.jpg"
                                     alt="Imagem Miniatura 1">
                             </div>
                             <div class="card thumbnail-card" onclick="changeImage(this)">
-                                <img src="https://images.kabum.com.br/produtos/fotos/164854/placa-de-video-asus-nvidia-dual-rtx-3060-o12g-v2-15-gbps-12gb-gddr6-ray-tracing-dlss-90yv0gb2-m0na10_1623244900_gg.jpg"
+                                <img src="https://images.kabum.com.br/produtos/fotos/356530/notebook-samsung-intel-core-i5-1135g7-8gb-ram-ssd-256gb-15-6-full-hd-windows-11-home-cinza-np550xda-kh2br_1655749556_gg.jpg"
                                     alt="Imagem Miniatura 2">
                             </div>
+                            <div class="card thumbnail-card" onclick="changeImage(this)">
+                                <img src="https://images.kabum.com.br/produtos/fotos/356530/notebook-samsung-intel-core-i5-1135g7-8gb-ram-ssd-256gb-15-6-full-hd-windows-11-home-cinza-np550xda-kh2br_1655749558_gg.jpg"
+                                    alt="Imagem Miniatura 3">
                         </div>
+                        <div class="card thumbnail-card" onclick="changeImage(this)">
+                            <img src="https://images.kabum.com.br/produtos/fotos/356530/notebook-samsung-intel-core-i5-1135g7-8gb-ram-ssd-256gb-15-6-full-hd-windows-11-home-cinza-np550xda-kh2br_1655749559_gg.jpg"
+                                alt="Imagem Miniatura 4">
                     </div>
+                    </div>
+                    </div>
+                    
                     <div class="col">
                         <div class="card">
                             <div class="card-body">
@@ -118,11 +127,11 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <p>Vendido e entregue por: <strong>KaBuM!</strong><br> <span class="in-stock">Em estoque</span></p>
+                    <p>Vendido e entregue por: <strong>ByteTech!</strong><br> <span class="in-stock">Em estoque</span></p>
                     <div class="price">
-                        <span class="text-muted"><del>R$ 3.166,56</del></span>
+                        <span class="text-muted"><del>R$  3.166,56</del></span>
                         <br>
-                        <h2 class="mb-1 fw-bold">R$ 2.789,07  </h2>
+                        <h2 class="mb-1 fw-bold">R$ 2.789,07</h2>
                         <p class="fs-6 fw-bold mb-1 text-muted">À vista no PIX com até 10% OFF</p>
                     </div>
                     <div class="mb-2">
@@ -130,7 +139,7 @@
                     </div>
                     <div class="mb-2">
                         <button class="btn btn-primary" id="addToCartBtn"
-                            onclick="addToCart('Notebook Samsung Book Intel Core i5', 2.099)">Adicionar ao Carrinho</button>
+                            onclick="addToCart('Notebook Samsung Book Intel Core i5', 2400)">Adicionar ao Carrinho</button>
                     </div>
     
                 </div>
@@ -150,8 +159,6 @@
                     <p><span class="bold-text">Teclado e touchpad</span></p>
                     <p>Um touchpad maior e o teclado confortável completo com teclas espaçosas criam uma interface ergonomicamente alinhada, mantendo uma estrutura fina e compacta. Desfrute de uma experiência de entrada confortável que oferece delicadeza de controle, precisão de movimentos e ultraeficiência.</p>
                     
-
-
                 </div>
             </div>
         </div>
@@ -172,17 +179,29 @@
                     </tr>
                 </thead>
                 <tbody id="cart-items">
-                    
+                   
                 </tbody>
             </table>
     
             <p class="text-end">Total: <span id="cart-total">R$ 0.00</span></p>
         </div>
      </div>
+    <script>
+        function changeImage(element) {
+            var mainImage = document.getElementById("main-image");
+            var thumbnailImages = document.querySelectorAll(".thumbnail-card img");
+
+           
+            var index = Array.from(thumbnailImages).indexOf(element.querySelector('img'));
+
+            if (mainImage && thumbnailImages.length > index) {
+                mainImage.src = thumbnailImages[index].src;
+            }
+        }
+    </script>
     <script src="assets/js/carrinho.js"></script>
     
-
-
 </body>
 
 </html>
+           

@@ -118,11 +118,11 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <p>Vendido e entregue por: <strong>KaBuM!</strong><br> <span class="in-stock">Em estoque</span></p>
+                    <p>Vendido e entregue por: <strong>ByteTech!</strong><br> <span class="in-stock">Em estoque</span></p>
                     <div class="price">
-                        <span class="text-muted"><del>R$ 2.777,77</del></span>
+                        <span class="text-muted"><del>R$  2.777,77</del></span>
                         <br>
-                        <h2 class="mb-1 fw-bold">R$ 2.099,99</h2>
+                        <h2 class="mb-1 fw-bold">R$2.099,99</h2>
                         <p class="fs-6 fw-bold mb-1 text-muted">À vista no PIX com até 10% OFF</p>
                     </div>
                     <div class="mb-2">
@@ -130,7 +130,7 @@
                     </div>
                     <div class="mb-2">
                         <button class="btn btn-primary" id="addToCartBtn"
-                            onclick="addToCart('RTX 3060', 2.099)">Adicionar ao Carrinho</button>
+                            onclick="addToCart('Placa de Vídeo RTX 3060 Galax GeForce', 2400)">Adicionar ao Carrinho</button>
                     </div>
     
                 </div>
@@ -160,6 +160,7 @@
                     <p><span class="bold-text">Backplate Protetor</span></p>
                     <p>A PCB é reforçada por um backplate de alumínio que proporciona rigidez estrutural, ajudando a impedir a
                         flexão e a proteger componentes e trilhas contra danos.</p>
+
                 </div>
             </div>
         </div>
@@ -180,17 +181,50 @@
                     </tr>
                 </thead>
                 <tbody id="cart-items">
-                 
+                  
                 </tbody>
             </table>
     
             <p class="text-end">Total: <span id="cart-total">R$ 0.00</span></p>
         </div>
      </div>
+    <script>
+        function changeImage(element) {
+            var mainImage = document.getElementById("main-image");
+            var thumbnailImages = document.querySelectorAll(".thumbnail-card img");
+
+           
+            var index = Array.from(thumbnailImages).indexOf(element.querySelector('img'));
+
+            if (mainImage && thumbnailImages.length > index) {
+                mainImage.src = thumbnailImages[index].src;
+            }
+        }
+    </script>
     <script src="assets/js/carrinho.js"></script>
-    
-
-
 </body>
+            
+<footer> <style> footer{background-color: #333;}</style>
+    
+    <nav>
+       
+    </nav>
+    
+    <div class="contact-info" style="text-align: center; color: #fff;">
+        <p>Entre em contato:</p>
+        <p>Email: contato@bytetechstore.com</p>
+        <p>Telefone: +079 32252345</p>
+    </div>
+    <div class="social-links"  style="text-align: center;">
+        <a href="https://facebook.com/bytetechstore"><img src="https://tse4.mm.bing.net/th?id=OIP.3_pTQmo4Qaok7rsEwX5IvQHaOQ&pid=Api&P=0&h=180" alt="Facebook" width="50" height="50"></a>
+        <a href="https://twitter.com/bytetechstore"><img src="https://pluspng.com/img-png/twitter-logo-png-logo-twitter-in-png-2500.png" alt="Twitter" width="50" height="50"></a>
+    </div>
+   
+    <div class="additional-policies"  style="text-align: center;">
+        <a href="/reembolso">Política de Reembolso</a>
+        <a href="/envio">Política de Envio</a>
+    </div>
+    
+</footer>
 
 </html>

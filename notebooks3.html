@@ -95,15 +95,24 @@
                     <div class="col-auto">
                         <div id="">
                             <div class="card thumbnail-card" onclick="changeImage(this)">
-                                <img src="https://images.kabum.com.br/produtos/fotos/164854/placa-de-video-asus-nvidia-dual-rtx-3060-o12g-v2-15-gbps-12gb-gddr6-ray-tracing-dlss-90yv0gb2-m0na10_1623244899_gg.jpg"
+                                <img src="https://images.kabum.com.br/produtos/fotos/460938/notebook-lenovo-ultrafino-ideapad-1-ryzen-5-7520u-8gb-ram-ssd-256gb-amd-radeon-610m-integrado-15-6-hd-linux-cloud-grey-82x5s00100-6-linux-cloud-grey-82x5s00100_1686138932_gg.jpg"
                                     alt="Imagem Miniatura 1">
                             </div>
                             <div class="card thumbnail-card" onclick="changeImage(this)">
-                                <img src="https://images.kabum.com.br/produtos/fotos/164854/placa-de-video-asus-nvidia-dual-rtx-3060-o12g-v2-15-gbps-12gb-gddr6-ray-tracing-dlss-90yv0gb2-m0na10_1623244900_gg.jpg"
+                                <img src="https://images.kabum.com.br/produtos/fotos/460938/notebook-lenovo-ultrafino-ideapad-1-ryzen-5-7520u-8gb-ram-ssd-256gb-amd-radeon-610m-integrado-15-6-hd-linux-cloud-grey-82x5s00100-6-linux-cloud-grey-82x5s00100_1686138936_gg.jpg"
                                     alt="Imagem Miniatura 2">
                             </div>
+                            <div class="card thumbnail-card" onclick="changeImage(this)">
+                                <img src="https://images.kabum.com.br/produtos/fotos/460938/notebook-lenovo-ultrafino-ideapad-1-ryzen-5-7520u-8gb-ram-ssd-256gb-amd-radeon-610m-integrado-15-6-hd-linux-cloud-grey-82x5s00100-6-linux-cloud-grey-82x5s00100_1686138931_gg.jpg"
+                                    alt="Imagem Miniatura 3">
                         </div>
+                        <div class="card thumbnail-card" onclick="changeImage(this)">
+                            <img src="https://images.kabum.com.br/produtos/fotos/460938/notebook-lenovo-ultrafino-ideapad-1-ryzen-5-7520u-8gb-ram-ssd-256gb-amd-radeon-610m-integrado-15-6-hd-linux-cloud-grey-82x5s00100-6-linux-cloud-grey-82x5s00100_1686138935_gg.jpg"
+                                alt="Imagem Miniatura 4">
                     </div>
+                    </div>
+                    </div>
+                    
                     <div class="col">
                         <div class="card">
                             <div class="card-body">
@@ -118,11 +127,11 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <p>Vendido e entregue por: <strong>KaBuM!</strong><br> <span class="in-stock">Em estoque</span></p>
+                    <p>Vendido e entregue por: <strong>ByteTech!</strong><br> <span class="in-stock">Em estoque</span></p>
                     <div class="price">
-                        <span class="text-muted"><del>R$  2.799,99</del></span>
+                        <span class="text-muted"><del>R$   2.799,99</del></span>
                         <br>
-                        <h2 class="mb-1 fw-bold">R$ 2.399,99 </h2>
+                        <h2 class="mb-1 fw-bold">R$ 2.399,99</h2>
                         <p class="fs-6 fw-bold mb-1 text-muted">À vista no PIX com até 10% OFF</p>
                     </div>
                     <div class="mb-2">
@@ -130,7 +139,7 @@
                     </div>
                     <div class="mb-2">
                         <button class="btn btn-primary" id="addToCartBtn"
-                            onclick="addToCart('Notebook Lenovo Ultrafino IdeaPad 1 Ryzen 5', 2.099)">Adicionar ao Carrinho</button>
+                            onclick="addToCart('Notebook Lenovo Ultrafino IdeaPad 1 Ryzen 5', 2400)">Adicionar ao Carrinho</button>
                     </div>
     
                 </div>
@@ -143,12 +152,6 @@
                     <p><span class="bold-text">Notebook Lenovo Ultrafino IdeaPad</span></p>
                     <p>O estilo encontra a eficiência! Explore e conecte-se onde quer que a vida o leve com o notavelmente fino notebook IdeaPad 1 Gen 7.15″ AMD. Ele inicializa em segundos com Flip to Start, que exige apenas que você abra a tampa para ligar e é impulsionado por processadores AMD Ryzen ultraeficientes que permitem realizar várias tarefas com facilidade.</p>
                     <p>Divirta-se com o IdeaPad 1,15" AMD enquanto assiste a programas em uma tela HD expansiva de 15,6" com uma moldura extremamente fina. Ouça áudio rico de alto-falantes estéreo Dolby Audio. Desfrute de chamadas de vídeo nítidas em sua webcam HD, que oferece um obturador de privacidade que bloqueia espectadores indesejados. E com uma bateria que dura o dia todo e carrega super rápido, você pode trabalhar de qualquer lugar.</p>
-
-
-
-
-
-
 
 
                 </div>
@@ -171,16 +174,27 @@
                     </tr>
                 </thead>
                 <tbody id="cart-items">
+                   
                 </tbody>
             </table>
     
             <p class="text-end">Total: <span id="cart-total">R$ 0.00</span></p>
         </div>
      </div>
+    <script>
+        function changeImage(element) {
+            var mainImage = document.getElementById("main-image");
+            var thumbnailImages = document.querySelectorAll(".thumbnail-card img");
+
+           
+            var index = Array.from(thumbnailImages).indexOf(element.querySelector('img'));
+
+            if (mainImage && thumbnailImages.length > index) {
+                mainImage.src = thumbnailImages[index].src;
+            }
+        }
+    </script>
     <script src="assets/js/carrinho.js"></script>
-    
-
-
 </body>
 
 </html>
